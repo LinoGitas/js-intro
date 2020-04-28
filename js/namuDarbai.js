@@ -48,4 +48,8 @@ const dayB = ['Ketvirtadienis', 'Penktadienis', 'Sestadienis', 'Sekmadienis'];
 
 let dayResult = dayB[3] + ', ' + dayB[2] + ', ' + dayB[1] + ', ' +dayB[0];
 dayResult = dayResult + ', ' + dayA[2] + ', ' + dayA[1] + ', ' +dayA[0];
-console.log('Rezultatas: ', dayResult);
+console.log('Rezultatas A: ', dayResult);
+
+let dayResultB = `${dayB[3]}, ${dayB[2]}, ${dayB[1]}, ${dayB[0]}`;
+dayResultB = `${dayResultB}, ${dayA[2]}, ${dayA[1]}, ${dayA[0]}`;
+console.log('Rezultatas B: ', dayResultB);
