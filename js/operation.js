@@ -45,10 +45,14 @@ const trys = 'trys';
 const sakinys = `Skaicius '${du}' ir skaicius "${trys}" yra geri skaiciai.`;
 console.log( sakinys );
 
+const vienas = 1;
+const keturi = 'keturi';
+const sakinys2 = 'Skaicius \'' +vienas + '\' ir skaicius "' + keturi+ '" yra geri skaiciai.';
+console.log( sakinys2 );
+
 //Srasu operacijos (array)
 const pazymiai = [10, 8, 7, 6, 4, 8];
 const abc = ['a', 'b', 'c', 'd', 'e', 'f'];
-
 console.log( pazymiai );
 console.log( abc );
 
@@ -81,3 +85,5 @@ abcSakinys = abcSakinys +abc[3];
 abcSakinys = abcSakinys +abc[4];
 abcSakinys = abcSakinys +abc[5];
 console.log( 'Visa abc:', abcSakinys );
+
+console.log( pazymiai[3.141529654] );
