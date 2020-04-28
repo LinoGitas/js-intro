@@ -57,9 +57,3 @@ for ( let i=0; i<textoIlgis; i++) {
 */
 
 console.log(`Tekstas "${tekstas}" atbulai yra "${atbulas}".`);
-
-
-for (let i=0; i<=11; i++) {
-    console.log(i, '->', i %3);
-}
-
