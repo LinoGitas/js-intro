@@ -62,7 +62,7 @@ console.log('----------------');
 console.log('Balyba be liekanos');
 console.log('----------------');
 
-const from = -11;
+const from = 1;
 const till = 11;
 const divider = 3;
 let count = 0;

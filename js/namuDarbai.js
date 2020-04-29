@@ -69,9 +69,9 @@ console.log('   3. Skaičių intervale tarp 0 ir 11, besidalinančių be liekano
 console.log('------------------------------------------------------------------------------------------------------');
 
 
-const divisionA = 3; // 3, 5, 7
-const divisionB = 5; 
-const divisionC = 7; 
+const dividerA = 3; // 3, 5, 7
+const dividerB = 5; 
+const dividerC = 7; 
 
 const from = 0; // 0, 8,  -18
 const to = 11;  // 11,  31, 18
@@ -86,17 +86,17 @@ let resultC = '';
 
 for (let i = from; i <= to; i++) {
     
-    if (i % divisionA == 0) {
-        countA++; //count = count +1;
+    if (i % dividerA == 0) {
+        countA++;
         resultA += i + ',';   
     }
 
-    if (i % divisionB == 0) {
+    if (i % dividerB == 0) {
         countB++;
         resultB += i + ',';   
     }
 
-    if (i % divisionC == 0) {
+    if (i % dividerC == 0) {
         countC++; 
         resultC += i + ',';   
     }
@@ -106,6 +106,6 @@ resultA = resultA.slice(0,-1);
 resultB = resultB.slice(0,-1);
 resultC = resultC.slice(0,-1);
 //console.log(i, '->', i %division);
-console.log(`Skaičių intervale tarp ${from} ir ${to}, besidalinančių be liekanos iš ${divisionA} yra ${countA} vienetai (Skaiciai be liekanos: ${resultA}).`);
-console.log(`Skaičių intervale tarp ${from} ir ${to}, besidalinančių be liekanos iš ${divisionB} yra ${countB} vienetai (Skaiciai be liekanos: ${resultB}).`);
-console.log(`Skaičių intervale tarp ${from} ir ${to}, besidalinančių be liekanos iš ${divisionC} yra ${countC} vienetai (Skaiciai be liekanos: ${resultC}).`);
+console.log(`Skaičių intervale tarp ${from} ir ${to}, besidalinančių be liekanos iš ${dividerA} yra ${countA} vienetai (Skaiciai be liekanos: ${resultA}).`);
+console.log(`Skaičių intervale tarp ${from} ir ${to}, besidalinančių be liekanos iš ${dividerB} yra ${countB} vienetai (Skaiciai be liekanos: ${resultB}).`);
+console.log(`Skaičių intervale tarp ${from} ir ${to}, besidalinančių be liekanos iš ${dividerC} yra ${countC} vienetai (Skaiciai be liekanos: ${resultC}).`);
