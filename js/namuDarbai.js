@@ -85,6 +85,7 @@ let resultB = '';
 let resultC = '';
 
 for (let i = from; i <= to; i++) {
+    
     if (i % divisionA == 0) {
         countA++; //count = count +1;
         resultA += i + ',';   
