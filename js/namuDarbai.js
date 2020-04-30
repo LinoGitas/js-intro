@@ -109,3 +109,38 @@ resultC = resultC.slice(0,-1);
 console.log(`Skaičių intervale tarp ${from} ir ${to}, besidalinančių be liekanos iš ${dividerA} yra ${countA} vienetai (Skaiciai be liekanos: ${resultA}).`);
 console.log(`Skaičių intervale tarp ${from} ir ${to}, besidalinančių be liekanos iš ${dividerB} yra ${countB} vienetai (Skaiciai be liekanos: ${resultB}).`);
 console.log(`Skaičių intervale tarp ${from} ir ${to}, besidalinančių be liekanos iš ${dividerC} yra ${countC} vienetai (Skaiciai be liekanos: ${resultC}).`);
+
+
+console.log('------------------------------------------------------------------------------------------------------');
+console.log( 'NAMU DARBAS 3');
+console.log('------------------------------------------------------------------------------------------------------');
+
+function interval(divider, from, to)
+{ 
+    let cnt = 0;
+    let int = '';
+
+    for ( let i = from; i <= to; i++ ) {       
+        if ( i % divider == 0 ) {
+            cnt++;
+            int += i + ',';   
+        }
+    }
+
+    int = int.slice(0,-1);
+
+    const res = `Skaičių intervale tarp ${from} ir ${to}, besidalinančių be liekanos iš ${divider} yra ${cnt} vienetai (Skaiciai be liekanos: ${int}).`
+    return res;
+}
+
+console.log(interval(3, 0, 11));
+console.log(interval(5, 0, 11));
+console.log(interval(7, 0, 11));
+
+console.log(interval(3, 8, 31));
+console.log(interval(5, 8, 31));
+console.log(interval(7, 8, 31));
+
+console.log(interval(3, -18, 18));
+console.log(interval(5, -18, 18));
+console.log(interval(7, -18, 18));
