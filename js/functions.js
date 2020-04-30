@@ -153,3 +153,71 @@ console.log(skaitmenuKiekisSkaiciuje( -3.1415 ), '->', 5);
 
 console.log('kas negerai su tokiu skaiciume??? 🤔🤔');
 console.log( skaitmenuKiekisSkaiciuje( 10000000000000000000000000000000000000000 ), '->', 31 );
+//  1 e+29 = 1* 10 29 standartne skaiciaus israiska
+//  1e-30 = 1 * 10 30 standartne skaiciaus israiska
+//  1e+40 
+//  Atmintyje toks formatas yar patogiau saugoti!!!
+
+console.log('---------------------');
+console.log('Didziausias skaicius sarase');
+console.log('---------------------');
+
+function didziausiasSkaiciusSarase( list )
+{
+    if ( Array.isArray(list) === false)
+    {
+        return console.error('ERROR: array turi buti array tipo');
+    }
+
+    if ( list.length === 0)
+    {
+        return console.error('ERROR: array negali buti array tuscias');
+    }
+
+    // einame per skaiciu sarasa
+        // tikriname ar einamesnis skaicius yra tikras skaicius
+            //jei ne:
+                //einame prie sekancio saraso nario (ciklo)
+        // tikriname ar einamesnis skaicius didesnis uz 'biggest'
+            //jei taip:
+                //'biggest' = einamasis skaicius
+    //Po visko patikriname ar tai normalus skaicius
+
+    let biggest = -Infinity;
+        for ( let i=0; i<list.length; i++) {
+            const einamasisSkaicius = list[i];
+            if (isFinite(einamasisSkaicius) === false) {
+                continue;
+            }              
+            if ( einamasisSkaicius > biggest ){
+                biggest = einamasisSkaicius;
+            }
+        }
+
+        if ( biggest === -Infinity){
+            return console.error('ERROR: 1234');
+        }
+    
+    return biggest;
+}
+
+console.log( didziausiasSkaiciusSarase( 'pomidoras' ) );
+console.log( didziausiasSkaiciusSarase( 1 ) );
+console.log( didziausiasSkaiciusSarase( true ) );
+console.log( didziausiasSkaiciusSarase( false ) );
+console.log( didziausiasSkaiciusSarase( [] ) );
+console.log( didziausiasSkaiciusSarase( [ Infinity, Infinity,  Infinity ]));
+
+console.log( didziausiasSkaiciusSarase( [ 1 ] ), '->',  1);
+console.log( didziausiasSkaiciusSarase( [ 1, 2, 3 ]), '->',  3);
+console.log( didziausiasSkaiciusSarase( [ -5, 78, 14, 0, 18 ] ), '->',  78 );
+console.log( didziausiasSkaiciusSarase( [ 69, 69, 69, 69, 66 ] ), '->',  69 );
+console.log( didziausiasSkaiciusSarase( [ -1, -2, -3, -4, -5, -6, -7, -8 ]), '->',  -1  );
+
+console.log( didziausiasSkaiciusSarase( [ 1, Infinity, 3 ]), '->',  3);
+console.log( didziausiasSkaiciusSarase( [ 1, 3 , Infinity]), '->',  3);
+
+console.log( didziausiasSkaiciusSarase( [ Infinity,1, 3 ]), '->',  3);
+console.log( didziausiasSkaiciusSarase( [ 1, Infinity, Infinity ]), '->',  1);
+console.log( didziausiasSkaiciusSarase( [ Infinity, 1, Infinity ]), '->',  1);
+console.log( didziausiasSkaiciusSarase( [ Infinity, Infinity, 1 ]), '->',  1);
